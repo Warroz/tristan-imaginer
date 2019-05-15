@@ -1,0 +1,67 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <h1 style="font-size: 2em">I-maginer</h1>
+      </a>
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+        data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end">
+
+
+        {{#if user}}
+
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="/articles/add" class="menu-link">
+              Ajouter un article
+            </a>
+          </div>
+        </div>
+
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="/user/logout" class="menu-link">
+              se déconnecter
+            </a>
+          </div>
+        </div>
+
+        {{else}}
+
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="/user/Login" class="menu-link">
+              Connexion
+            </a>
+          </div>
+        </div>
+
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="/user/create" class="menu-link">
+              Inscription
+            </a>
+          </div>
+        </div>
+
+        {{/if}}
+
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="/contact" class="menu-link">
+              Contactez nous
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</nav>
